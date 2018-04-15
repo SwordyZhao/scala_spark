@@ -48,7 +48,7 @@ object TopNTest {
 
     }
 
-
+//scala实现排序方法
     def scalaMenond(list: List[Tuple2[String,Int]],a:Int): SortedMap[String,Int] ={
         if(list == null || list.isEmpty) null
         else{
