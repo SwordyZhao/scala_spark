@@ -4,7 +4,8 @@ import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 
 object Test1 {
     def main(args: Array[String]): Unit = {
-        test3(25,7)
+        println(charProd2("zhaogs"))
+        println(charProd("zhaogs"))
     }
     def test1: Unit ={
         val a = "121"
@@ -50,7 +51,32 @@ object Test1 {
     def test4: Unit ={
 
     }
+    def sinNum(num: Int):Int = {
+        if(num>0) 1
+        else{
+            if(num < 0) -1
+            else 0
+        }
+    }
 
+    def charProd(word: String):Long = {
+        var prod:Long = 1
+        if(word.size == 0) 0
+        for(i <- 0 until  word.size){
+            prod*=word.charAt(i)
+        }
+        prod
+    }
+
+    def charProd2(word: String):Long = {
+        println(word.size)
+        if (word.size == 0) 0
+        if(word.size == 1) word.charAt(0)
+        else {
+            println(word.charAt(word.size-1))
+            charProd2(word.substring(1)) * word.charAt(0)
+        }
+    }
 
 
 
